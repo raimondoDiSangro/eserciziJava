@@ -13,7 +13,7 @@ public class AccountTest {
 		balance = input.nextDouble();
 		
 		Account myAccount = new Account(nameOwn, balance);
-		Account myAccount2 = new Account("Bettino Craxi", 90123.70);
+		Account myAccount2 = new Account("Giovanni Rossi", 90123.70);
 		
 		//myAccount.setName(nameOwn);
 		
