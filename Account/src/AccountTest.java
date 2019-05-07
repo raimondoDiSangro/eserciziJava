@@ -15,9 +15,6 @@ public class AccountTest {
 		Account myAccount = new Account(nameOwn, balance);
 		Account myAccount2 = new Account("Giovanni Rossi", 90123.70);
 		
-		//myAccount.setName(nameOwn);
-		
-	
 		System.out.println("INTESTATARIO " + myAccount.getName());
 		System.out.println("SALDO "+ myAccount.getBalance());
 		
