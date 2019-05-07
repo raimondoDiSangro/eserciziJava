@@ -31,7 +31,8 @@ public class AccountTest {
 		System.out.println("Inserire denaro da prelevare-> ");
 		myAccount.withdraw(input.nextDouble());
 		System.out.println("Nuovo SALDO "+ myAccount.getBalance());
-						
+		
+							
 		input.close();
 	}
 }
