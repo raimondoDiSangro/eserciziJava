@@ -1,3 +1,5 @@
+//Classe driver per provare Account
+
 import java.util.Scanner;
 
 public class AccountTest {
@@ -12,24 +14,31 @@ public class AccountTest {
 		System.out.printf("Inserisci il deposito iniziale -> ");
 		balance = input.nextDouble();
 		
+		
 		Account myAccount = new Account(nameOwn, balance);
-		Account myAccount2 = new Account("Giovanni Rossi", 90123.70);
+		//Account myAccount2 = new Account("Giovanni Rossi", 90123.70);
+		
+		System.out.println("Inserire fido da concedere: ");
+		myAccount.setCredit(input.nextDouble());
 		
 		System.out.println("INTESTATARIO " + myAccount.getName());
 		System.out.println("SALDO "+ myAccount.getBalance());
+		System.out.println("FIDO " + myAccount.getCredit());
 		
-		System.out.println("INTESTATARIO " + myAccount2.getName());
-		System.out.println("SALDO "+ myAccount2.getBalance());
+		/*System.out.println("INTESTATARIO " + myAccount2.getName());
+		System.out.println("SALDO "+ myAccount2.getBalance());*/
+		
+		
 		
 		System.out.println("Inserire valore deposito-> ");
 		myAccount.deposit(input.nextDouble());
-		System.out.println("Nuovo SALDO "+ myAccount.getBalance());
 		
+		System.out.println("Nuovo SALDO "+ myAccount.getBalance());
 		System.out.println("Inserire denaro da prelevare-> ");
+		
 		myAccount.withdraw(input.nextDouble());
 		System.out.println("Nuovo SALDO "+ myAccount.getBalance());
-		
-							
+									
 		input.close();
 	}
 }
