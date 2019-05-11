@@ -30,7 +30,9 @@ public class Account  {
 	{
 		if (deposit > 0.0) 
 		{
-		balance = balance + deposit;
+		balance += deposit;
+		} else {
+			System.out.println("Operazione non effettuata, valore non consentito");
 		}
 	}
 	
@@ -39,6 +41,8 @@ public class Account  {
 	{
 		if (credit > 0.0) {
 			this.credit = credit;
+		} else {
+			System.out.println("Operazione non effettuata, valore non consentito");
 		}
 	}
 	
@@ -47,8 +51,10 @@ public class Account  {
 	//il prelievo non viene effettuato
 	public void withdraw(double withdraw)
 	{
-		if (balance + credit - withdraw >= 0) {
+		if (balance + credit - withdraw >= 0 && withdraw > 0.0) {
 			balance -= withdraw;
+		} else {
+			System.out.println("Operazione non effettuata, fondi insufficienti");
 		}
 	}
 	
@@ -65,8 +71,8 @@ public class Account  {
 	}
 	
 	//Metodo per ottenere il fidot
-		public double getCredit()
-		{
-			return credit;
-		}
+	public double getCredit()
+	{
+		return credit;
+	}
 }
